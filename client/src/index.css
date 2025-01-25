@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: url(/5e310f19b76b834dcb2ce77b_whatsapp-hero.png);
+    background-size: cover;
+    background-position: center ;
+    background-repeat: no-repeat;
+}
+
+
+*{
+    
+::-webkit-scrollbar{
+    width: 6px !important;
+}
+
+::-webkit-scrollbar-track{
+    background-color: white !important;
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 10px !important;
+    background: #000 !important;
+}
+
+}
