@@ -17,6 +17,7 @@ const sendMessage = async (req, res) =>{
         }
         let getConversation = await conversationSchema.findOne({participants:{$all:[senderId,receiverId]}})
             
+            
         if(!getConversation){
             getConversation = await conversationSchema.create({participants:[senderId,receiverId]});
         }
@@ -52,7 +53,7 @@ const getMessage = async (req, res) => {
     try {
          const reciveriId = req.params.id 
          const senderId = req.user.userId  
-              if(!reciveriId || !reciveriId){
+              if(!reciveriId || !senderId){
                 return res.status(400).json({ message: "Receiver ID and Sender ID is required." });
               }
          const conversation = await conversationSchema.findOne({

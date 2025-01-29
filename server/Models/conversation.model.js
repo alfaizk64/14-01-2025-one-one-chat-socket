@@ -1,7 +1,7 @@
 const mongoos = require("mongoose");
 
-const conversationModel = new mongoos.Schema({
-  participants: [
+const conversationModel = new mongoos.Schema(
+  { participants: [
     {
       type: mongoos.Schema.Types.ObjectId,
       ref: "User",

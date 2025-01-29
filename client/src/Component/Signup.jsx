@@ -43,7 +43,7 @@ const Signup = () => {
             gender: "",
           });
           setTimeout(() => {
-            navigate("/login");
+            navigate("/");
         }, 1000);
     } catch (error) {
          toast.error(`Error: ${error.response.data.message}`, {duration: 3000, position: "top-right",icon: "❌"});      
