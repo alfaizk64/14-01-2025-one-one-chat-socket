@@ -1,5 +1,5 @@
 import userSchema from "../Models/user.model.js"
-import bcrypt from "bcrypt";
+import bcrypt from 'bcryptjs';
 import validator from 'validator'
 import jwt from 'jsonwebtoken'
 import JWT_SECRET from '../Config/authConfig.js'
