@@ -27,7 +27,7 @@ const Login = () => {
   const submitHandler = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5050/api/v1/user/login",loginData,{
+      const res = await axios.post("https://one4-01-2025-one-one-chat-socket.onrender.com/api/v1/user/login",loginData,{
         headers: {
             "Content-type": "application/json",
         },

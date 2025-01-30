@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser())
 const corsOptions = {
-  origin: "http://localhost:5173", 
+  origin: "https://one4-01-2025-one-one-chat-socket.onrender.com", 
   credentials: true, // Allow cookies
 
 };
