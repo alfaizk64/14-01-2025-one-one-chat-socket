@@ -1,6 +1,6 @@
-const express = require('express');
-const { userRegistration, login, logout, getOtherUsers } = require('../Controller/user.Controller');
-const isAuthenticatedMiddleware = require('../Middlewares/isAuthenticated.middleware');
+import express from 'express'
+import { userRegistration, login, logout, getOtherUsers } from '../Controller/user.Controller.js'
+import isAuthenticatedMiddleware from '../Middlewares/isAuthenticated.middleware.js';
 const router  = express.Router()
 
 
@@ -16,4 +16,4 @@ router.get("/",isAuthenticatedMiddleware,getOtherUsers)
 
 
 
-module.exports = router
+export default router

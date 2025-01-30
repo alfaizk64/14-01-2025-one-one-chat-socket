@@ -1,10 +1,10 @@
-const userSchema  = require('../Models/user.model')
-const bcrypt = require('bcrypt');
-const validator = require('validator');
-const jwt = require('jsonwebtoken');
-const JWT_SECRET = require('../Config/authConfig')
+import userSchema from "../Models/user.model.js"
+import bcrypt from "bcrypt";
+import validator from 'validator'
+import jwt from 'jsonwebtoken'
+import JWT_SECRET from '../Config/authConfig.js'
 
-const userRegistration = async (req, res) => {
+export const userRegistration = async (req, res) => {
     try {
         const { fullName, email, username, password, confirmPassword, gender } = req.body;
 
@@ -83,7 +83,7 @@ const userRegistration = async (req, res) => {
 
 
 
-const login = async (req, res) => {
+export const login = async (req, res) => {
     try {
         const { username, password } = req.body;
         // Validate required fields
@@ -136,7 +136,7 @@ const login = async (req, res) => {
         });
     }
 }
- const logout = (req, res) => {
+export const logout = (req, res) => {
   try {
     res.clearCookie("token", { path: "/" });
   return  res.status(200).json({ message: "Logged out successfully." });   
@@ -145,7 +145,7 @@ const login = async (req, res) => {
     return res.status(500).json({ message: "An error occurred during logout. Please try again later." });
   }
 }
-const getOtherUsers =async (req, res) => {
+export const getOtherUsers =async (req, res) => {
     
       try {
         if (!req.user || !req.user.userId) {
@@ -164,9 +164,4 @@ const getOtherUsers =async (req, res) => {
          
       }
 }
-module.exports = {
-    userRegistration,
-    login,
-    logout,
-    getOtherUsers
-};
+

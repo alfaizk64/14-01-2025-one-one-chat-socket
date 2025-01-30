@@ -1,6 +1,5 @@
-const jwt = require('jsonwebtoken');
-const JWT_SECRET = require('../Config/authConfig')
-
+import jwt from 'jsonwebtoken'
+import JWT_SECRET  from '../Config/authConfig.js'
 
 
 
@@ -37,4 +36,4 @@ const isAuthenticatedMiddleware = async (req, res, next) => {
     }
 }
 
-module.exports = isAuthenticatedMiddleware;
+export default isAuthenticatedMiddleware

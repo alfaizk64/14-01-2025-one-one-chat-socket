@@ -1,5 +1,5 @@
-const crypto = require("crypto");
+import crypto from 'crypto';
 
 const JWT_SECRET = crypto.randomBytes(32).toString();
 
-module.exports = JWT_SECRET;
+export default JWT_SECRET

@@ -1,9 +1,9 @@
-const conversationSchema = require("../Models/conversation.model");
-const messageSchema = require("../Models/message.model");
-const { io, getReceiverSocketId } = require("../socket/socket");
+import conversationSchema from '../Models/conversation.model.js'
+import messageSchema from '../Models/message.model.js'
+import {io,getReceiverSocketId} from "../socket/socket.js"
 
 
-const sendMessage = async (req, res) =>{
+export const sendMessage = async (req, res) =>{
     try {
         const senderId = req.user.userId;
         const receiverId = req.params.id;
@@ -49,7 +49,7 @@ const sendMessage = async (req, res) =>{
 }
 
 
-const getMessage = async (req, res) => {
+export const getMessage = async (req, res) => {
     try {
          const reciveriId = req.params.id 
          const senderId = req.user.userId  
@@ -72,5 +72,3 @@ const getMessage = async (req, res) => {
         
     }
 }
-
-module.exports = {sendMessage,getMessage};            
