@@ -30,7 +30,7 @@ const App = () => {
          
   useEffect(() => {
     if (authUser) {
-      const socket = io("http://localhost:5050", {
+      const socket = io("https://one4-01-2025-one-one-chat-socket.onrender.com", {
         query: {
           userId: authUser.id,
         },
