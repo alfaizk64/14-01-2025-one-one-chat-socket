@@ -11,7 +11,7 @@ const useGetMessages = () => {
         const fetchMessages = async () => {
             try {
                 axios.defaults.withCredentials=true
-                 const response = await axios.get(`http://localhost:5050/api/v1/message/${selectedUser?._id}`)
+                 const response = await axios.get(`https://one4-01-2025-one-one-chat-socket.onrender.com/api/v1/message/${selectedUser?._id}`)
                 //  console.log(response);
                  
                     dispatch(setMessages(response?.data?.message))

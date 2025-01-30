@@ -20,7 +20,7 @@ function SendInput() {
     e.preventDefault();
           try {
             axios.defaults.withCredentials= true
-             const res = await axios.post(`http://localhost:5050/api/v1/message/send/${selectedUser?._id}`,{message},{
+             const res = await axios.post(`https://one4-01-2025-one-one-chat-socket.onrender.com/api/v1/message/send/${selectedUser?._id}`,{message},{
                 headers: {
                     "Content-Type": "application/json",
              },

@@ -14,7 +14,7 @@ const Sidebar = () => {
     const {listedUsers} = useSelector(store => store.listedUsers)
     const logOuthandler = async () => {
        try {
-            const response = await axios.get('http://localhost:5050/api/v1/user/logout')
+            const response = await axios.get('https://one4-01-2025-one-one-chat-socket.onrender.com/api/v1/user/logout')
             toast.success(( `${response.data.message}`),
             {duration: 3000, position: "top-right",icon: "❌"}   
          );

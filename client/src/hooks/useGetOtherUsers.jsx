@@ -10,7 +10,7 @@ const useGetOtherUsers = () => {
     const fetchOtherUsers = async () => {
             try {
                 axios.defaults.withCredentials=true;
-                const response = await axios.get('http://localhost:5050/api/v1/user/')
+                const response = await axios.get('https://one4-01-2025-one-one-chat-socket.onrender.com/api/v1/user/')
                 dispatch(setListedUsers(response.data.getOtheruser))
             } catch (error) {
                 toast.error(`${error?.response?.data?.message}`)
